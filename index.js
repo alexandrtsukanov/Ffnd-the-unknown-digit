@@ -3,7 +3,7 @@ function solveExpression(initExp) {
   if (initExp[0] === '-') {
     exp = initExp.slice(1);
   } else {
-    for (let i = 0; i <= initExp.length; i += 1) {
+    for (let i = 0; i < initExp.length; i += 1) {
       if ((initExp[i] === '-' && initExp[i - 1] === '+') || (initExp[i] === '-' && initExp[i - 1] === '-') || (initExp[i] === '-' && initExp[i - 1] === '*') || (initExp[i] === '-' && initExp[i - 1] === '=')) {
         let expInt = initExp.split('')
         expInt.splice(initExp.indexOf(initExp[i]), 1)
